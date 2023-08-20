@@ -1,0 +1,11 @@
+game:GetService("StarterGui"):SetCore("SendNotification",{["Title"] = "Zoom Loaded!",["Text"] = "Press C to toggle zoom",["Duration"] = 20,["Button1"] = "Okay."})
+
+while task.wait() do
+    local UserInputService = game:GetService("UserInputService")
+    local CHeld = UserInputService:IsKeyDown(Enum.KeyCode.C)
+    if CHeld == true then
+        game.workspace.CurrentCamera.FieldOfView = 30
+    else
+        game.workspace.CurrentCamera.FieldOfView = 70
+    end
+end
